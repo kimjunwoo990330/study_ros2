@@ -1,0 +1,10 @@
+image:
+  file: Dockerfile
+
+tasks:
+  - init: |
+      mkdir -p src
+      colcon build || true
+      echo "source install/setup.bash" >> ~/.bashrc
+    command: |
+      echo "ROS2 ready!"
